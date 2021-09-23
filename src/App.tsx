@@ -1,7 +1,13 @@
+import GlobalStyle from "./styles/globalStyle";
+import Main from "./pages/main";
+
 const App = () => {
-  return(
-    <div>Hello</div>
-  )
-}
+    return (
+        <>
+            <GlobalStyle />
+            <Main />
+        </>
+    );
+};
 
 export default App;
