@@ -8,7 +8,6 @@ const ContainerWrapper = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 16px 0px;
 `;
 
 const Container = ({ children }: ContainerProps) => {

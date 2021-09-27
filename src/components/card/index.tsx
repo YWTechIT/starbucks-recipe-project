@@ -12,7 +12,6 @@ const CardWrapper = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 16px 0px;
     padding: 1.2rem 0;
     background-color: #f1f0ea;
     cursor: pointer;
