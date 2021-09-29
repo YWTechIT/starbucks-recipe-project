@@ -10,9 +10,14 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1;
     font-weight: 400;
   }
+  html{
+    font-size: 10px;
+  }
+
   body {
     height: 100%;
   }
+
   button {
     text-decoration: none;
     cursor: pointer;
