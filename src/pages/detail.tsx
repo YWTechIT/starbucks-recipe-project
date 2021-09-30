@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Footer, NavBar } from "../components";
 import styled, { keyframes } from "styled-components";
-import Recipes from "../api";
+import {Recipes} from "../api";
 
 interface ParamTypes {
     id: string;
@@ -117,7 +117,7 @@ const OrderContent = styled.span`
 
 const Detail = () => {
     const { id } = useParams<ParamTypes>();
-    const recipe = Recipes.getRecipe(id)[0];
+    const recipe = new Recipes().getRecipe(id)[0];
 
     return (
         <>

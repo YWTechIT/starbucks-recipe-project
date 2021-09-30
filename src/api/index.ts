@@ -5,11 +5,9 @@ interface Methods {
   getRecipe: (targetId: string) => void;
 }
 
-class Recipes implements Methods{
+export class Recipes implements Methods{
 
   getRecipe = (targetId: string): RecipeType[] => {
     return RECIPE_SAMPLE.filter((ele) => ele.id === targetId);
   }
 }
-
-export default new Recipes();
