@@ -4,10 +4,8 @@ export interface RecipeType {
     id: string;
     title: string;
     desc: string;
-    src: SrcType;
-    alt: string;
-    required: string;
+    src: string;
     type: string;
     step: string[];
-    price: string;
+    price: number;
 }

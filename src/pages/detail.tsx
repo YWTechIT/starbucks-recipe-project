@@ -124,7 +124,7 @@ const Detail = () => {
             <NavBar />
             <DetailWrapper>
                 <Title>{recipe.title}</Title>
-                <ImgStyle src={recipe.src[recipe.alt]} />
+                <ImgStyle src={recipe.src} alt={recipe.title}/>
                 <OrderWrapper>
                     <OrderTitle>사이렌 오더</OrderTitle>
                     <OrderContents>
