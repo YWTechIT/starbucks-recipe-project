@@ -8,7 +8,6 @@ export interface RecipeType {
     alt: string;
     required: string;
     type: string;
-    detailSrc: SrcType;
-    detailAlt: string;
-    step: any[];
+    step: string[];
+    price: string;
 }

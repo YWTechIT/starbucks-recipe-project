@@ -1,12 +1,12 @@
 import { Card, Container, Footer, NavBar } from "../components";
-import { RECIPE_CONFIG } from "../config";
+import { RECIPE_SAMPLE } from "../fixture";
 
 const Landing = () => {
     return (
         <>
             <NavBar />
             <Container>
-                {RECIPE_CONFIG.map((item) => (
+                {RECIPE_SAMPLE.map((item) => (
                     <Card item={item} key={item.id}></Card>
                 ))}
             </Container>
