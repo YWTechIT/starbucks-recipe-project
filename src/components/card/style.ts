@@ -15,6 +15,7 @@ export const CardWrapper = styled.article`
 `;
 
 export const ImgWrapper = styled.section`
+    width: 100%;
     overflow: hidden;
     margin-bottom: 16px;
     border-radius: 4px;
