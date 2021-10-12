@@ -23,7 +23,8 @@ export const ImgWrapper = styled.section`
 
 export const ImgStyle = styled.img`
     width: 100%;
-    height: 460px;
+    min-width: 100%;
+    height: 410px;
     object-fit: cover;
     object-position: center;
     transition: transform 1s ease;
@@ -65,7 +66,7 @@ export const Type = styled.span`
 
 export const Button = styled.button`
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     color: #006c49;
@@ -78,6 +79,7 @@ export const Button = styled.button`
     margin-bottom: 1.2rem;
     line-height: 1.2;
     &:hover {
-        background-color:#d4e9e2;
+        background-color: #E8F1ED;
+        transition: all 0.2s ease;
     }
 `;

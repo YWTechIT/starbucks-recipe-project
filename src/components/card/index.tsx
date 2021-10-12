@@ -8,6 +8,7 @@ interface CardProps {
 
 const Card = ({ item }: CardProps) => {
     let history = useHistory();
+    const beverageType = item.type.split("_").join(" ");
 
     return (
         <CardWrapper>
@@ -17,7 +18,7 @@ const Card = ({ item }: CardProps) => {
             <ContentWrapper>
                 <Title>{item.title}</Title>
                 <Desc>{item.desc}</Desc>
-                <Type>{item.type}</Type>
+                <Type>{beverageType}</Type>
                 <Type>₩ {item.price.toLocaleString()}</Type>
                 <Button onClick={() => history.push(`/recipe/${item.id}`)}>GET THE RECIPE</Button>
             </ContentWrapper>
