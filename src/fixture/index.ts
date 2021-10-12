@@ -14,7 +14,7 @@ import {
     dolcheLatte,
     hwiYoung,
 } from "../assets";
-import { RecipeType } from "../types";
+import { BeverageType, RecipeType } from "../types";
 
 export const RECIPE_SAMPLE: RecipeType[] = [
     {
@@ -22,9 +22,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "캡틴크런치베리 프라푸치노",
         desc: "악마의 음료 순한버전",
         src: captainCrunchBerry,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-           "화이트 딸기 크림 ICED / Venti",
+           "화이트 딸기 크림 Venti",
            "일반 우유 / 두유",
            "헤이즐넛 시럽 2",
            "자바칩과 토핑(반반) 6",
@@ -38,9 +38,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "슈렉 프라푸치노",
         desc: "그린티와 초코의 절묘한 조화",
         src: shrek,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "제주 유기농 말차로 만든 크림 프라푸치노 ICED / Tall",
+            "제주 유기농 말차로 만든 크림 프라푸치노 Tall",
             "에스프레소 샷 1",
             "프라푸치노용 시럽",
             "클래식 시럽 2",
@@ -56,9 +56,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "돼지바 프라푸치노",
         desc: "돼지바 아이스크림을 연상시키는 맛",
         src: pigbar,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "화이트 딸기 크림 프라푸치노 ICED / Venti",
+            "화이트 딸기 크림 프라푸치노 Venti",
             "딸기 믹스 6",
             "얼음 적게",
             "자바칩 & 토핑(반반) 9",
@@ -72,9 +72,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "트윅스 프라푸치노",
         desc: "쫀득한 카라멜과 달콤한 초코의 조화",
         src: twix,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "카라멜 프라푸치노 ICED / Tall",
+            "카라멜 프라푸치노 Tall",
             "프라푸치노 로스트 2",
             "프라푸치노용 시럽",
             "카라멜 시럽 2",
@@ -91,9 +91,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "페로로로쉐 프라푸치노",
         desc: "텐션 솟구치는 맛",
         src: ferreroRocher,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-           "자바 칩 프라푸치노 ICED / Venti",
+           "자바 칩 프라푸치노 Venti",
            "프라푸치노 로스트 4",
            "푸라푸치노용 시럽",
            "모카 시럽 4", 
@@ -108,9 +108,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "버터비어 프라푸치노",
         desc: "해리포터에 나온 버터 맥주와 비슷한 음료",
         src: butterBeer,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "바닐라 크림 프라푸치노 ICED / Tall",
+            "바닐라 크림 프라푸치노 all",
             "프라푸치노용 시럽",
             "바닐라 시럽 2",
             "헤이즐넛 시럽 2", 
@@ -124,9 +124,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "오레오 프라푸치노",
         desc: "메이플 피칸 맛 아이스 커피",
         src: oreo,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "바닐라 크림 프라푸치노 ICED / Tall",
+            "바닐라 크림 프라푸치노 Tall",
             "프라푸치노용 시럽",
             "바닐라 시럽 2",
             "자바칩과 토핑(반반) 3",
@@ -140,9 +140,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "초코나무 숲 프라푸치노",
         desc: "녹덕들의 최애음료",
         src: chocoTreeForest,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "제주 유기농 말차로 만든 크림 프라푸치노 ICED / Tall",
+            "제주 유기농 말차로 만든 크림 프라푸치노 Tall",
             "에스프레소 샷 1",
             "두유",
             "자바칩과 토핑(반반) 5",
@@ -157,9 +157,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "스니커즈 프라푸치노",
         desc: "우울함을 날리고 싶을 때",
         src: sneakers,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "자바 칩 프라푸치노 ICED / Tall",
+            "자바 칩 프라푸치노 Tall",
             "프라푸치노 로스트 2",
             "프라푸치노용 시럽",
             "모카 시럽 2", 
@@ -175,9 +175,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "고디바 프라푸치노",
         desc: "고오급 초콜렛 맛 음료",
         src: godiva,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "자바칩 프라푸치노 벤티 사이즈",
+            "자바칩 프라푸치노 Venti",
             "프라푸치노 로스트 4",
             "프라푸치노용 시럽",
             "모카 시럽 5", 
@@ -191,9 +191,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "더위사냥 프라푸치노",
         desc: "에스프레소 휘핑과 카라멜의 조화",
         src: hotHunt,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "에스프레소 프라푸치노 ICED / Tall",
+            "에스프레소 프라푸치노 Tall",
             "에스프레소 샷 1",
             "프라푸치노 로스트 2",
             "프라푸치노용 시럽",
@@ -207,9 +207,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "쿠앤크 프라푸치노",
         desc: "쿠키를 먹는 듯한 느낌",
         src: kuAndKu,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "바닐라크림 프라푸치노 ICED / Tall",
+            "바닐라크림 프라푸치노 Tall",
             "자바칩과 토핑(반반) 3",
             "일반 휘핑 많이",
             "초콜릿 드리즐 많이"
@@ -221,9 +221,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "돌체 라떼 커스텀",
         desc: "진한 에스프레소와 달콤한 연유의 궁합",
         src: dolcheLatte,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "아이스 스타벅스 돌체 라떼 ICED / Tall ",
+            "아이스 스타벅스 돌체 라떼 Tall ",
             "두유",
             "에스프레소 휘핑 보통"
         ],
@@ -234,9 +234,9 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         title: "휘영 프라푸치노",
         desc: "SF9 휘영이 추천하는 레시피",
         src: hwiYoung,
-        type: "ICED BEVERAGES",
+        type: BeverageType.ICED,
         step: [
-            "카라멜 프라푸치노 ICED / Venti",
+            "카라멜 프라푸치노 Venti",
             "헤이즐넛 시럽 1",
             "프라푸치노 자바칩 7",
             "에스프레소 휘핑 많이",
