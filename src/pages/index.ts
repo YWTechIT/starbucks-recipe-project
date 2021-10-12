@@ -1,2 +1,2 @@
-export { default as Landing } from "./landing"; 
-export { default as Detail } from "./detail"; 
+export { default as Landing } from "./landing/"; 
+export { default as Detail } from "./detail/"; 
