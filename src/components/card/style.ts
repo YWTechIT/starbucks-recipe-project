@@ -7,27 +7,34 @@ export const CardWrapper = styled.article`
     align-items: center;
     background-color: #f1f0ea;
     padding-bottom: 1.2rem;
-
+    border-radius: 4px;
     @media screen and (min-width: 768px){
         width: auto;
         margin: 1.2rem 1.2rem .8rem 1.2rem;
     }
 `;
 
+export const ImgWrapper = styled.section`
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border-radius: 4px;
+`
+
 export const ImgStyle = styled.img`
     width: 100%;
-    height: 460px;
+    min-width: 100%;
+    height: 410px;
     object-fit: cover;
     object-position: center;
-    margin-bottom: 16px;
-    transition: 1s ease;
+    transition: transform 1s ease;
     cursor: pointer;
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 `;
 
-export const TextWrapper = styled.section`
+export const ContentWrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +48,7 @@ export const Title = styled.h3`
     margin-bottom: 1.6rem;
 `;
 
-export const Content = styled.span`
+export const Desc = styled.span`
     font-size: 18px;
     color: #0000008e;
     margin-bottom: 1.2rem;
@@ -59,7 +66,7 @@ export const Type = styled.span`
 
 export const Button = styled.button`
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
     color: #006c49;
@@ -72,6 +79,7 @@ export const Button = styled.button`
     margin-bottom: 1.2rem;
     line-height: 1.2;
     &:hover {
-        background-color:#d4e9e2;
+        background-color: #E8F1ED;
+        transition: all 0.2s ease;
     }
 `;

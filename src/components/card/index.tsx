@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { RecipeType } from "../../types";
-import { CardWrapper, ImgStyle, TextWrapper, Title, Content, Type, Button } from "./style";
+import { CardWrapper, ImgStyle, ContentWrapper, Title, Desc, Type, Button, ImgWrapper } from "./style";
 
 interface CardProps {
     item: RecipeType;
@@ -8,18 +8,20 @@ interface CardProps {
 
 const Card = ({ item }: CardProps) => {
     let history = useHistory();
-    const src = item.src;
+    const beverageType = item.type.split("_").join(" ");
 
     return (
         <CardWrapper>
-            <ImgStyle src={src[item.alt]} alt={item.alt} onClick={() => history.push(`/recipe/${item.id}`)}/>
-            <TextWrapper>
+            <ImgWrapper>
+                <ImgStyle src={item.src} alt={item.title} onClick={() => history.push(`/recipe/${item.id}`)}/>
+            </ImgWrapper>
+            <ContentWrapper>
                 <Title>{item.title}</Title>
-                <Content>{item.desc}</Content>
-                <Type>{item.type}</Type>
-                <Type>₩ {item.price}</Type>
+                <Desc>{item.desc}</Desc>
+                <Type>{beverageType}</Type>
+                <Type>₩ {item.price.toLocaleString()}</Type>
                 <Button onClick={() => history.push(`/recipe/${item.id}`)}>GET THE RECIPE</Button>
-            </TextWrapper>
+            </ContentWrapper>
         </CardWrapper>
     );
 };

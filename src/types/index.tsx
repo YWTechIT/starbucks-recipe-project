@@ -1,13 +1,14 @@
-type SrcType = { [key in string]: string };
-
 export interface RecipeType {
     id: string;
     title: string;
     desc: string;
-    src: SrcType;
-    alt: string;
-    required: string;
-    type: string;
+    src: string;
+    type: BeverageType;
     step: string[];
-    price: string;
+    price: number;
+}
+
+export enum BeverageType {
+    ICED = "ICED_BEVERAGES",
+    HOT = "HOT_BEVERAGES"
 }

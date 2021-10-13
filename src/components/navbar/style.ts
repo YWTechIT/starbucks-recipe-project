@@ -13,6 +13,7 @@ export const NavBarWrapper = styled.nav`
     letter-spacing: 1.92px;
     font-weight: 700;
     line-height: 17px;
+    z-index: 1;
 
     @media screen and (min-width: 768px){
         padding: 1.625rem;
