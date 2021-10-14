@@ -1,19 +1,3 @@
-import {
-    godiva,
-    shrek,
-    pigbar,
-    twix,
-    ferreroRocher,
-    butterBeer,
-    oreo,
-    chocoTreeForest,
-    sneakers,
-    captainCrunchBerry,
-    hotHunt,
-    kuAndKu,
-    dolcheLatte,
-    hwiYoung,
-} from "../assets";
 import { BeverageType, RecipeType } from "../types";
 
 export const RECIPE_SAMPLE: RecipeType[] = [
@@ -21,7 +5,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "1",
         title: "캡틴크런치베리 프라푸치노",
         desc: "악마의 음료 순한버전",
-        src: captainCrunchBerry,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/01-captain-crunch-berry.webp",
         type: BeverageType.ICED,
         step: [
            "화이트 딸기 크림 Venti",
@@ -37,7 +21,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "2",
         title: "슈렉 프라푸치노",
         desc: "그린티와 초코의 절묘한 조화",
-        src: shrek,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/02-shrek.webp",
         type: BeverageType.ICED,
         step: [
             "제주 유기농 말차로 만든 크림 프라푸치노 Tall",
@@ -55,7 +39,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "3",
         title: "돼지바 프라푸치노",
         desc: "돼지바 아이스크림을 연상시키는 맛",
-        src: pigbar,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/03-pigbar.webp",
         type: BeverageType.ICED,
         step: [
             "화이트 딸기 크림 프라푸치노 Venti",
@@ -71,7 +55,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "4",
         title: "트윅스 프라푸치노",
         desc: "쫀득한 카라멜과 달콤한 초코의 조화",
-        src: twix,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/04-twix.webp",
         type: BeverageType.ICED,
         step: [
             "카라멜 프라푸치노 Tall",
@@ -90,7 +74,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "5",
         title: "페로로로쉐 프라푸치노",
         desc: "텐션 솟구치는 맛",
-        src: ferreroRocher,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/05-ferrero-rocher.webp",
         type: BeverageType.ICED,
         step: [
            "자바 칩 프라푸치노 Venti",
@@ -107,7 +91,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "6",
         title: "버터비어 프라푸치노",
         desc: "해리포터에 나온 버터 맥주와 비슷한 음료",
-        src: butterBeer,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/06-butter-beer.webp",
         type: BeverageType.ICED,
         step: [
             "바닐라 크림 프라푸치노 all",
@@ -123,7 +107,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "7",
         title: "오레오 프라푸치노",
         desc: "메이플 피칸 맛 아이스 커피",
-        src: oreo,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/07-oreo.webp",
         type: BeverageType.ICED,
         step: [
             "바닐라 크림 프라푸치노 Tall",
@@ -139,7 +123,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "8",
         title: "초코나무 숲 프라푸치노",
         desc: "녹덕들의 최애음료",
-        src: chocoTreeForest,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/08-choco-tree-forest.webp",
         type: BeverageType.ICED,
         step: [
             "제주 유기농 말차로 만든 크림 프라푸치노 Tall",
@@ -156,7 +140,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "9",
         title: "스니커즈 프라푸치노",
         desc: "우울함을 날리고 싶을 때",
-        src: sneakers,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/09-sneakers.webp",
         type: BeverageType.ICED,
         step: [
             "자바 칩 프라푸치노 Tall",
@@ -174,7 +158,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "10",
         title: "고디바 프라푸치노",
         desc: "고오급 초콜렛 맛 음료",
-        src: godiva,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/10-godiva.webp",
         type: BeverageType.ICED,
         step: [
             "자바칩 프라푸치노 Venti",
@@ -190,7 +174,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "11",
         title: "더위사냥 프라푸치노",
         desc: "에스프레소 휘핑과 카라멜의 조화",
-        src: hotHunt,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/11-hot-hunt.webp",
         type: BeverageType.ICED,
         step: [
             "에스프레소 프라푸치노 Tall",
@@ -206,7 +190,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "12",
         title: "쿠앤크 프라푸치노",
         desc: "쿠키를 먹는 듯한 느낌",
-        src: kuAndKu,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/12-ku-and-ku.webp",
         type: BeverageType.ICED,
         step: [
             "바닐라크림 프라푸치노 Tall",
@@ -220,7 +204,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "13",
         title: "돌체 라떼 커스텀",
         desc: "진한 에스프레소와 달콤한 연유의 궁합",
-        src: dolcheLatte,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/13-dolche-latte.webp",
         type: BeverageType.ICED,
         step: [
             "아이스 스타벅스 돌체 라떼 Tall ",
@@ -233,7 +217,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "14",
         title: "휘영 프라푸치노",
         desc: "SF9 휘영이 추천하는 레시피",
-        src: hwiYoung,
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/14-whi-young.webp",
         type: BeverageType.ICED,
         step: [
             "카라멜 프라푸치노 Venti",
