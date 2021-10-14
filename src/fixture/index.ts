@@ -217,7 +217,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         id: "14",
         title: "휘영 프라푸치노",
         desc: "SF9 휘영이 추천하는 레시피",
-        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/14-whi-young.webp",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/14-hwi-young.webp",
         type: BeverageType.ICED,
         step: [
             "카라멜 프라푸치노 Venti",
