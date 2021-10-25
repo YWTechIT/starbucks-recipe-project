@@ -29,6 +29,7 @@ const Filter = ({getSortByFilter}: FilterProps) => {
     }, [getSortByFilter]);
 
     const resetFilterData = useCallback(() => {
+        setIsModalOpen(false);
         setCurrentFilterType(FilterType.popularity);
         getSortByFilter(FilterType.popularity);
     }, [getSortByFilter])
