@@ -1,4 +1,4 @@
-import { BeverageType, RecipeType } from "../types";
+import { BeverageType, RecipeType } from "../../types";
 
 export const RECIPE_SAMPLE: RecipeType[] = [
     {
@@ -15,6 +15,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
            "일반휘핑 많이",
         ],
         price: 7700,
+        tags: ["딸기", "헤이즐넛"],
+        likes: 3,
     },
 
     {
@@ -34,6 +36,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "유기농 말차 2"
         ],
         price: 8100,
+        tags: ["녹차", "에스프레소", "초콜릿"],
+        likes: 4,
     },
     {
         id: "3",
@@ -50,6 +54,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 많이",
         ],
         price: 8900,
+        tags: ["딸기", "초콜릿"],
+        likes: 2,
     },
     {
         id: "4",
@@ -69,6 +75,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 보통",
         ],
         price: 7400,
+        tags: ["카라멜", "헤이즐넛", "초콜릿"],
+        likes: 1,
     },
     {
         id: "5",
@@ -86,6 +94,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
            "에스프레소 휘핑 보통",
         ],
         price: 7100,
+        tags: ["초콜릿", "헤이즐넛", "에스프레소"],
+        likes: 6,
     },
     {
         id: "6",
@@ -102,6 +112,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "카라멜 드리즐 보통",
         ],
         price: 6600,
+        tags: ["바닐라", "헤이즐넛", "카라멜"],
+        likes: 5,
     },
     {
         id: "7",
@@ -118,6 +130,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 보통",
         ],
         price: 6000,
+        tags: ["바닐라", "에스프레소", "초콜릿"],
+        likes: 8,
     },
     {
         id: "8",
@@ -135,6 +149,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "유기농 말차 5"
         ],
         price: 8100,
+        tags: ["녹차", "에스프레소", "초콜릿"],
+        likes: 9,
     },
     {
         id: "9",
@@ -153,6 +169,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "카라멜 드리즐 보통",
         ],
         price: 7300,
+        tags: ["초콜릿", "헤이즐넛", "카라멜"],
+        likes: 6,
     },
     {
         id: "10",
@@ -169,6 +187,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "자바칩과 토핑(반반) 4",
         ],
         price: 7700,
+        tags: ["초콜릿", "헤이즐넛"],
+        likes: 1,
     },
     {
         id: "11",
@@ -185,6 +205,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "카라멜 드리즐 보통",
         ],
         price: 6300,
+        tags: ["에스프레소", "카라멜"],
+        likes: 2,
     },
     {
         id: "12",
@@ -199,6 +221,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 많이"
         ],
         price: 6000,
+        tags: ["바닐라", "초콜릿"],
+        likes: 5,
     },
     {
         id: "13",
@@ -212,6 +236,8 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "에스프레소 휘핑 보통"
         ],
         price: 6200,
+        tags: ["돌체", "에스프레소"],
+        likes: 7,
     },
     {
         id: "14",
@@ -227,5 +253,95 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초코 드리즐 보통",
         ],
         price: 8400,
+        tags: ["카라멜", "헤이즐넛", "프라푸치노", "초콜릿"],
+        likes: 8,
+    },
+    {
+        id: "15",
+        title: "에스프레소 프라푸치노 라이트",
+        desc: "라이트 시럽으로 당 30% 감소",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/15-espresso-light.webp",
+        type: BeverageType.ICED,
+        step: [
+            "에스프레소 프라푸치노 Tall",
+            "프라푸치노용 시럽 라이트"
+        ],
+        price: 5100,
+        tags: ["다이어트", "라이트", "에스프레소", "프라푸치노"],
+        likes: 10,
+    },
+    {
+        id: "16",
+        title: "딸기 딜라이트 요거트 블렌디드 라이트",
+        desc: "돌체 시럽 최대한 적게하여 당 50% 감소",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/16-strawberry-light.webp",
+        type: BeverageType.ICED,
+        step: [
+            "딸기 딜라이트 요거트 블렌디드 Tall",
+            "돌체 시럽 1",
+            "딸기 소스 1",
+        ],
+        price: 6100,
+        tags: ["다이어트", "라이트", "딸기", "요거트"],
+        likes: 12,
+    },
+    {
+        id: "17",
+        title: "스타벅스 더블 샷 라이트",
+        desc: "진한 카라멜마끼아토를 느낄 수 있는 맛",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/17-double-shot.webp",
+        type: BeverageType.ICED,
+        step: [
+            "커피 스타벅스 더블 샷",
+            "클래식 시럽 없이",
+            "하프앤하프",
+            "에스프레소 휘핑 보통(선택)",
+        ],
+        price: 4800,
+        tags: ["다이어트", "라이트", "에스프레소", "요거트"],
+        likes: 4,
+    },
+    {
+        id: "18",
+        title: "에스프레소 콘 파나",
+        desc: "에스프레소 고수이신 분 추천",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/18-espresso-con-panna.webp",
+        type: BeverageType.HOT,
+        step: [
+            "에스프레스 콘 파나",
+            "일반 휘핑",
+        ],
+        price: 3800,
+        tags: ["다이어트", "에스프레소"],
+        likes: 2,
+    },
+    {
+        id: "19",
+        title: "콜드브루 오트라떼",
+        desc: "유당불내증이 있는 분들에게 추천",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/19-cold-brew-oat-latte.webp",
+        type: BeverageType.ICED,
+        step: [
+            "콜드 브루 오트 라떼 Tall",
+            "클래식 시럽 없이",
+        ],
+        price: 5600,
+        tags: ["다이어트", "비건", "오트", "콜드브루"],
+        likes: 1,
+    },
+    {
+        id: "20",
+        title: "바닐라 크림 콜드브루",
+        desc: "아바라(아이스바닐라라떼)가 부담스러울 때",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/20-vanilla-cream-cold-brew.webp",
+        type: BeverageType.ICED,
+        step: [
+            "바닐라 크림 콜드 브루 Tall",
+            "바닐라 시럽 없이",
+            "바닐라 크림 베이스 적게",
+        ],
+        price: 5500,
+        tags: ["다이어트", "바닐라", "콜드브루"],
+        likes: 6,
     },
 ];
