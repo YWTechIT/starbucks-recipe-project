@@ -1,4 +1,4 @@
-import { RECIPE_SAMPLE } from "../fixture";
+import { RECIPE_SAMPLE } from "../fixture/recipe";
 import { RecipeType } from "../types";
 
 interface Methods {
