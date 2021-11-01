@@ -15,7 +15,7 @@ export enum BeverageType {
     HOT = "HOT_BEVERAGES",
 }
 
-export enum FilterType {
+export enum SortType {
     nameAsc = "이름 오름차순",
     nameDesc = "이름 내림차순",
     priceHigh = "높은가격순",
@@ -25,8 +25,18 @@ export enum FilterType {
     likeLow = "좋아요낮은순",
 }
 
-export interface FilterFixtureType {
+export enum bookMarkType {
+    nameAsc = "nameAsc",
+    nameDesc = "nameDesc",
+    priceHigh = "priceHigh",
+    priceLow = "priceLow",
+    popularity = "popularity",
+    likeHigh = "likeHigh",
+    likeLow = "likeLow",
+}
+
+export interface SortFixtureType {
     id: string;
     title: string;
-    filter: FilterType;
+    sort: SortType;
 }
