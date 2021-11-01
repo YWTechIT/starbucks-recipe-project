@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Footer, NavBar } from "../../components";
+import { Footer, Header } from "../../components";
 import { Recipes } from "../../api";
 import SocialButtonGroup from "../../components/socialShare";
 import { BulletStyle, CardWrapper, ContentsWrapper, DetailWrapper, HorizonStyle, ImageWrapper, ImgStyle, OrderContent, OrderContents, OrderWrapper, Price, ShareContainer, Title } from "./style";
@@ -14,7 +14,7 @@ const Detail = () => {
 
     return (
         <>
-            <NavBar />
+            <Header />
             <DetailWrapper>
                 <CardWrapper>
                     <ImageWrapper>

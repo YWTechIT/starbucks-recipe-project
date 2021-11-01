@@ -1,11 +1,11 @@
 import { CaretButton, CaretImg } from "./style"
 import caret from "../../assets/caret.svg";
-import { FilterType } from "../../types";
+import { SortType } from "../../types";
 
 export interface CaretProps{
   isModalOpen: boolean;
   handleToggleModal?: () => void;
-  modalType?: FilterType;
+  modalType?: SortType;
 }
 
 const Caret = ({isModalOpen, handleToggleModal, modalType}: CaretProps) => {
