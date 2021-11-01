@@ -1,39 +1,39 @@
-import { FilterFixtureType, FilterType } from "../../types";
+import { SortFixtureType, SortType } from "../../types";
 
-export const modalFixture: FilterFixtureType[] = [
+export const sortFixture: SortFixtureType[] = [
   {
       id: "1",
       title: "이름 오름차순",
-      filter: FilterType.nameAsc,
+      sort: SortType.nameAsc,
   },
   {
       id: "2",
       title: "이름 내림차순",
-      filter: FilterType.nameDesc,
+      sort: SortType.nameDesc,
   },
   {
       id: "3",
       title: "높은가격순",
-      filter: FilterType.priceHigh,
+      sort: SortType.priceHigh,
   },
   {
       id: "4",
       title: "낮은가격순",
-      filter: FilterType.priceLow,
+      sort: SortType.priceLow,
   },
   {
       id: "5",
       title: "인기순",
-      filter: FilterType.popularity,
+      sort: SortType.popularity,
   },
   {
       id: "6",
       title: "좋아요높은순",
-      filter: FilterType.likeHigh,
+      sort: SortType.likeHigh,
   },
   {
       id: "7",
       title: "좋아요낮은순",
-      filter: FilterType.likeLow,
+      sort: SortType.likeLow,
   },
 ]
