@@ -16,17 +16,17 @@ import {
 
 interface CardProps {
     item: RecipeType;
-    bookMark: string[];
+    likeBookMark: string[];
     handleBookMark: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const onSaved = true;
 const offSaved = false;
 
-const Card = ({ item, bookMark, handleBookMark }: CardProps) => {
+const Card = ({ item, likeBookMark, handleBookMark }: CardProps) => {
     let history = useHistory();
     const beverageType = item.type.split("_").join(" ");
-    const [liked, setLiked] = useState<boolean>(bookMark.includes(item.id) ? onSaved : offSaved);
+    const [liked, setLiked] = useState<boolean>(likeBookMark.includes(item.id) ? onSaved : offSaved);
 
     const handleSaved = () => {
         if (liked) {
