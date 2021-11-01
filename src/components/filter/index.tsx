@@ -1,38 +1,37 @@
 import { useCallback, useEffect, useState } from "react";
 import { Modal, Caret } from "../index";
 import { ModalBackGround } from "../modal/style";
-import { FilterType } from "../../types";
+import { bookMarkType, SortType } from "../../types";
+import convertSortTypeToBookMarkType from "../../utility/convertSortTypeToBookmarkType";
 
 interface FilterProps {
-    getSortByFilter: (type: FilterType) => void;
+    applySortData: (type: SortType) => void;
+    handleSortBookMark: React.Dispatch<React.SetStateAction<string[]>>;
+    saveFilterTypeAtBookMark: (type: bookMarkType) => void;
+
+    sortType: SortType;
+    setSortType: React.Dispatch<React.SetStateAction<SortType>>;
 }
 
-const Filter = ({getSortByFilter}: FilterProps) => {
+const Filter = ({applySortData, handleSortBookMark, saveFilterTypeAtBookMark, sortType, setSortType}: FilterProps) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-    const [currentFilterType, setCurrentFilterType] = useState<FilterType>(FilterType.popularity);
 
     const handleToggleModal = useCallback(() => {
         setIsModalOpen(!isModalOpen);
     }, [isModalOpen])
 
-    const handleDataType = useCallback((type: FilterType) => {
-        let filterType: FilterType;
-        if (type === FilterType.nameAsc) filterType = FilterType.nameAsc;
-        else if (type === FilterType.nameDesc) filterType = FilterType.nameDesc;
-        else if (type === FilterType.priceHigh) filterType = FilterType.priceHigh;
-        else if (type === FilterType.priceLow) filterType = FilterType.priceLow;
-        else if (type === FilterType.likeHigh) filterType = FilterType.likeHigh;
-        else if (type === FilterType.likeLow) filterType = FilterType.likeLow;
-        else filterType = FilterType.popularity;
-        getSortByFilter(filterType);
-        setCurrentFilterType(filterType);
-    }, [getSortByFilter]);
+    const handleSortType = useCallback((type: SortType) => {
+        let bookmark = convertSortTypeToBookMarkType(type);
+        saveFilterTypeAtBookMark(bookmark);
+        applySortData(sortType);
+        setSortType(type);
+    }, [sortType, applySortData, saveFilterTypeAtBookMark, setSortType]);
 
     const resetFilterData = useCallback(() => {
         setIsModalOpen(false);
-        setCurrentFilterType(FilterType.popularity);
-        getSortByFilter(FilterType.popularity);
-    }, [getSortByFilter])
+        setSortType(SortType.popularity);
+        handleSortBookMark([SortType.popularity]);
+    }, [handleSortBookMark, setSortType])
 
     useEffect(() => {
         if (isModalOpen) document.body.style.overflow = "hidden";
@@ -42,8 +41,8 @@ const Filter = ({getSortByFilter}: FilterProps) => {
     return (
         <>
             <Caret isModalOpen={isModalOpen} handleToggleModal={handleToggleModal}/>
-            { isModalOpen && <ModalBackGround /> }
-            { isModalOpen && <Modal handleToggleModal={handleToggleModal} handleDataType={handleDataType} currentFilterType={currentFilterType} resetFilterData={resetFilterData}/>}
+            { isModalOpen && <ModalBackGround isModalOpen={isModalOpen}/> }
+            { isModalOpen && <Modal isModalOpen={isModalOpen} handleToggleModal={handleToggleModal} handleSortType={handleSortType} sortType={sortType} resetFilterData={resetFilterData}/>}
         </>
     );
 };

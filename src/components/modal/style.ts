@@ -2,69 +2,64 @@ import styled, { keyframes } from "styled-components";
 import { ModalContentProps } from ".";
 
 interface ModalProps {
-    ref: React.ForwardedRef<HTMLDivElement>;
+    ref?: React.ForwardedRef<HTMLDivElement>;
+    isModalOpen: boolean;
 }
 
-export const fadeIn = keyframes`
-    from {
+export const fadeOut = keyframes`
+    0% {
         opacity: 0;
-        @media screen and (max-width: 768px){
-            transform: translateY(20px);
-        }
     }
-    to {
-        opacity: 3;
-        @media screen and (max-width: 768px){
-            transform: none;
-        }
+    100% {
+        opacity: 1;
     }
+`;
+
+export const fadeIn = keyframes`
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+  }
 `;
 
 export const ModalContainer = styled.section<ModalProps>`
+    width: 100%;
     position: fixed;
-    z-index: 1;
     background-color: #f9f9f9;
     bottom: 0;
     left: 0;
-    width: 100%;
     box-sizing: border-box;
-    padding: 12px 8px 64px 8px;
-    box-shadow: 0 1px 4px 0 rgb(0 0 0 / 30%);
+    padding: 12px 8px 32px 8px;
     border-radius: 4px;
-    animation: ${fadeIn} 0.4s ease-in-out;
+    visibility: ${(props) => props.isModalOpen ? "visibility" : "hidden" };
+    animation: ${(props) => props.isModalOpen ? fadeOut : fadeIn } 0.4s ease-out;
+    transition: animation 0.4s linear;
     z-index: 4;
 
     @media screen and (min-width: 768px) {
-        position: fixed;
+        top: 50%;
+        left: 50%;
         width: 375px;
         height: 443px;
         transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        animation: ${fadeIn} 0.4s ease-in-out;
     }
 `;
 
-export const fadeOut = keyframes`
-  0% {
-    opacity: 0
-  }
-  100% {a
-    opacity: 0.38
-  }
-`;
-
-export const ModalBackGround = styled.div`
+export const ModalBackGround = styled.div<ModalProps>`
     display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000000;
-    opacity: 0.38;
     overflow: hidden;
-    animation: ${fadeOut} 0.4s ease-in-out;
+
+    animation-name: ${(props) => props.isModalOpen ? fadeOut : fadeIn };
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 3;
 `;
 
@@ -97,28 +92,17 @@ export const ModalResetButton = styled.button`
     }
 `;
 
-export const ModalContentList = styled.ul`
-    width: 100%;
-`;
-
-export const ModalContentItem = styled.li`
-    width: 100%;
-`;
-
 export const ModalContentSelect = styled.button<ModalContentProps>`
     width: 100%;
-    background-color: ${(props) =>
-        props.currentFilter === props.target ? "#E8F1ED" : "inherit"};
+    background-color: ${(props) => props.sortType === props.target ? "#E8F1ED" : "inherit"};
     padding: 12px 15px;
     border: none;
     border-bottom: 1px solid #ededed;
 `;
 
 export const ModalContentTitle = styled.p<ModalContentProps>`
-    color: ${(props) =>
-        props.currentFilter === props.target ? "#006c49" : "#00000094"};
-    font-weight: ${(props) =>
-        props.currentFilter === props.target ? "800" : "500"};
+    color: ${(props) => props.sortType === props.target ? "#006c49" : "#00000094"};
+    font-weight: ${(props) => props.sortType === props.target ? "800" : "500"};
     font-size: 1.6rem;
     line-height: 1.5;
     letter-spacing: -0.01em;

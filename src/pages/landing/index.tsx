@@ -1,59 +1,50 @@
-import { useCallback, useState } from "react";
-import { Card, Container, Footer, NavBar, Comment, FilterBar } from "../../components";
+import { useCallback, useLayoutEffect, useState } from "react";
+import { Card, Container, Footer, Header, Comment, FilterBar } from "../../components";
 import { RECIPE_SAMPLE } from "../../fixture/recipe";
-import { FilterType, RecipeType } from "../../types";
+import { bookMarkType, SortType, RecipeType } from "../../types";
 import { CardsContainer } from "../../components/card/style";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+import {convertBookmarkDataToSortType, getSortData} from "../../utility";
 
 const Landing = () => {
     const [filteredData, setFilteredData] = useState<RecipeType[]>(RECIPE_SAMPLE);
-    const [bookMark, setBookMark] = useLocalStorage<string[]>("likes", []);
+    const [likeBookMark, setLikeBookMark] = useLocalStorage<string[]>("likes", []);
 
-    const getSortByFilter = useCallback(
-        (type: FilterType) => {
-            let sortByTypeData: RecipeType[];
-            if (type === FilterType.nameAsc)
-                sortByTypeData = [...filteredData].sort((a, b) =>
-                    a.title < b.title ? -1 : a.title > b.title ? 1 : 0
-                );
-            else if (type === FilterType.nameDesc)
-                sortByTypeData = [...filteredData].sort((a, b) =>
-                    a.title > b.title ? -1 : a.title < b.title ? 1 : 0
-                );
-            else if (type === FilterType.priceHigh)
-                sortByTypeData = [...filteredData].sort(
-                    (a, b) => b.price - a.price
-                );
-            else if (type === FilterType.priceLow)
-                sortByTypeData = [...filteredData].sort(
-                    (a, b) => a.price - b.price
-                );
-            else if (type === FilterType.likeHigh)
-                sortByTypeData = [...filteredData].sort(
-                    (a, b) => b.likes - a.likes
-                );
-            else if (type === FilterType.likeLow)
-                sortByTypeData = [...filteredData].sort(
-                    (a, b) => a.likes - b.likes
-                )
-            else sortByTypeData = [...RECIPE_SAMPLE];
-            setFilteredData(sortByTypeData);
-        },
-        [filteredData]
-    );
+    const [sortType, setSortType] = useState<SortType>(SortType.popularity);
+    const [sortTypeBookMark, setSortTypeBookMark] = useLocalStorage<string[]>("sortType", []);
+
+    // sortType별 레시피 정렬
+    const applySortData = useCallback(
+        (type: SortType) => {
+            let sortData = getSortData(type);
+            setFilteredData(sortData);
+        }, []);
+
+    // sortType bookmark에 저장
+    const saveFilterTypeAtBookMark = useCallback((type: bookMarkType) => {
+        setSortTypeBookMark([type]);
+    }, [setSortTypeBookMark])
+    
+    // 렌더링 되기 전 bookmarkType 적용
+    useLayoutEffect(() => {
+        let bookMarkData = [...sortTypeBookMark][0];
+        let sortType = convertBookmarkDataToSortType(bookMarkData);
+        setSortType(sortType);
+        applySortData(sortType);
+    }, [sortTypeBookMark, applySortData])
 
     return (
         <>
-            <NavBar />
+            <Header />
             <Container>
-                <FilterBar getSortByFilter={getSortByFilter} />
+                <FilterBar applySortData={applySortData} handleSortBookMark={setSortTypeBookMark} saveFilterTypeAtBookMark={saveFilterTypeAtBookMark} sortType={sortType} setSortType={setSortType}/>
                 <CardsContainer>
                     {filteredData.map((item) => (
                         <Card
                             item={item}
                             key={item.id}
-                            bookMark={bookMark}
-                            handleBookMark={setBookMark}
+                            likeBookMark={likeBookMark}
+                            handleBookMark={setLikeBookMark}
                         />
                     ))}
                 </CardsContainer>

@@ -1,61 +1,48 @@
 import { useRef } from "react";
-import {
-    ModalContainer,
-    ModalContentItem,
-    ModalContentList,
-    ModalContentSelect,
-    ModalContentTitle,
-    ModalHeader,
-    ModalResetButton,
-} from "./style";
+import { ModalContainer, ModalContentSelect, ModalContentTitle, ModalHeader, ModalResetButton } from "./style";
 import useOnClickOutside from "../../hooks/useOnClickOutSide";
-import { FilterType } from "../../types";
-import { modalFixture } from "../../fixture/filter";
+import { SortType } from "../../types";
+import { sortFixture } from "../../fixture/sort";
 
 interface ModalProps {
     handleToggleModal: () => void;
-    handleDataType: (type: FilterType) => void;
-    currentFilterType: FilterType;
+    handleSortType: (type: SortType) => void;
+    sortType: SortType;
     resetFilterData: () => void;
+    isModalOpen: boolean;
 }
 
 export interface ModalContentProps {
-    currentFilter: FilterType;
-    target: FilterType;
+    sortType: SortType;
+    target: SortType;
 }
 
-const Modal = ({ handleToggleModal, handleDataType, currentFilterType, resetFilterData }: ModalProps) => {
+const Modal = ({ handleToggleModal, handleSortType, sortType, resetFilterData, isModalOpen }: ModalProps) => {
     const modalEl = useRef<HTMLDivElement>(null);
     useOnClickOutside(modalEl, handleToggleModal);
 
     return (
-        <ModalContainer ref={modalEl}>
+        <ModalContainer ref={modalEl} isModalOpen={isModalOpen}>
             <>
                 <ModalHeader>정렬</ModalHeader>
-                {currentFilterType !== FilterType.popularity && (
+                {sortType !== SortType.popularity && (
                     <ModalResetButton onClick={() => resetFilterData()}>초기화</ModalResetButton>
                 )}
             </>
-            <ModalContentList>
-                {modalFixture.map((item) => (
-                    <ModalContentItem
-                        onClick={() => handleDataType(item.filter)}
-                        key={item.id}
-                    >
+            <ul>
+                {sortFixture.map((item) => (
+                    <li onClick={() => handleSortType(item.sort)} key={item.id}>
                         <ModalContentSelect 
-                            currentFilter={currentFilterType} 
-                            target={item.filter}
+                            sortType={sortType} 
+                            target={item.sort}
                             key={item.id}
                             onClick={() => handleToggleModal()}
                         >
-                            <ModalContentTitle 
-                                currentFilter={currentFilterType} 
-                                target={item.filter}
-                            >{item.title}</ModalContentTitle>
+                            <ModalContentTitle sortType={sortType} target={item.sort}>{item.title}</ModalContentTitle>
                         </ModalContentSelect>
-                    </ModalContentItem>
+                    </li>
                 ))}
-            </ModalContentList>
+            </ul>
         </ModalContainer>
     );
 };

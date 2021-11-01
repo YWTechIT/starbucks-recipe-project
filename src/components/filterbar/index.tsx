@@ -1,17 +1,22 @@
 import { RECIPE_SAMPLE } from "../../fixture/recipe";
-import { FilterType } from "../../types";
+import { bookMarkType, SortType } from "../../types";
 import Filter from "../filter";
 import { FilterBarContainer } from "./style";
 
 interface FilterBarProps {
-    getSortByFilter: (type: FilterType) => void;
+    applySortData: (type: SortType) => void;
+    handleSortBookMark: React.Dispatch<React.SetStateAction<string[]>>;
+    saveFilterTypeAtBookMark: (type: bookMarkType) => void;
+
+    sortType: SortType;
+    setSortType: React.Dispatch<React.SetStateAction<SortType>>;
 }
 
-const FilterBar = ({ getSortByFilter }: FilterBarProps) => {
+const FilterBar = ({ applySortData, handleSortBookMark, saveFilterTypeAtBookMark, sortType, setSortType }: FilterBarProps) => {
     return (
         <FilterBarContainer>
             <div>전체 {RECIPE_SAMPLE.length}개</div>
-            <Filter getSortByFilter={getSortByFilter} />
+            <Filter applySortData={applySortData} handleSortBookMark={handleSortBookMark} saveFilterTypeAtBookMark={saveFilterTypeAtBookMark} sortType={sortType} setSortType={setSortType}/>
         </FilterBarContainer>
     );
 };
