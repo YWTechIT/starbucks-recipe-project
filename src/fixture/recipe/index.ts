@@ -15,7 +15,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
            "일반휘핑 많이",
         ],
         price: 7700,
-        tags: ["딸기", "헤이즐넛"],
+        tags: ["딸기", "헤이즐넛", "디카페인"],
         likes: 3,
     },
 
@@ -36,7 +36,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "유기농 말차 2"
         ],
         price: 8100,
-        tags: ["녹차", "에스프레소", "초콜릿"],
+        tags: ["녹차", "에스프레소", "초콜릿", "카페인"],
         likes: 4,
     },
     {
@@ -54,7 +54,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 많이",
         ],
         price: 8900,
-        tags: ["딸기", "초콜릿"],
+        tags: ["딸기", "초콜릿", "디카페인"],
         likes: 2,
     },
     {
@@ -75,7 +75,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 보통",
         ],
         price: 7400,
-        tags: ["카라멜", "헤이즐넛", "초콜릿"],
+        tags: ["카라멜", "헤이즐넛", "초콜릿", "카페인"],
         likes: 1,
     },
     {
@@ -94,7 +94,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
            "에스프레소 휘핑 보통",
         ],
         price: 7100,
-        tags: ["초콜릿", "헤이즐넛", "에스프레소"],
+        tags: ["초콜릿", "헤이즐넛", "에스프레소", "카페인"],
         likes: 6,
     },
     {
@@ -112,7 +112,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "카라멜 드리즐 보통",
         ],
         price: 6600,
-        tags: ["바닐라", "헤이즐넛", "카라멜"],
+        tags: ["바닐라", "헤이즐넛", "카라멜", "디카페인"],
         likes: 5,
     },
     {
@@ -130,7 +130,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 보통",
         ],
         price: 6000,
-        tags: ["바닐라", "에스프레소", "초콜릿"],
+        tags: ["바닐라", "에스프레소", "초콜릿", "카페인"],
         likes: 8,
     },
     {
@@ -149,7 +149,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "유기농 말차 5"
         ],
         price: 8100,
-        tags: ["녹차", "에스프레소", "초콜릿"],
+        tags: ["녹차", "에스프레소", "초콜릿", "카페인"],
         likes: 9,
     },
     {
@@ -169,7 +169,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "카라멜 드리즐 보통",
         ],
         price: 7300,
-        tags: ["초콜릿", "헤이즐넛", "카라멜"],
+        tags: ["초콜릿", "헤이즐넛", "카라멜", "카페인"],
         likes: 6,
     },
     {
@@ -187,7 +187,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "자바칩과 토핑(반반) 4",
         ],
         price: 7700,
-        tags: ["초콜릿", "헤이즐넛"],
+        tags: ["초콜릿", "헤이즐넛", "카페인"],
         likes: 1,
     },
     {
@@ -205,7 +205,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "카라멜 드리즐 보통",
         ],
         price: 6300,
-        tags: ["에스프레소", "카라멜"],
+        tags: ["에스프레소", "카라멜", "카페인"],
         likes: 2,
     },
     {
@@ -221,7 +221,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초콜릿 드리즐 많이"
         ],
         price: 6000,
-        tags: ["바닐라", "초콜릿"],
+        tags: ["바닐라", "초콜릿", "디카페인"],
         likes: 5,
     },
     {
@@ -236,7 +236,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "에스프레소 휘핑 보통"
         ],
         price: 6200,
-        tags: ["돌체", "에스프레소"],
+        tags: ["돌체", "에스프레소", "카페인"],
         likes: 7,
     },
     {
@@ -253,7 +253,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "초코 드리즐 보통",
         ],
         price: 8400,
-        tags: ["카라멜", "헤이즐넛", "프라푸치노", "초콜릿"],
+        tags: ["카라멜", "헤이즐넛", "프라푸치노", "초콜릿", "카페인"],
         likes: 8,
     },
     {
@@ -267,7 +267,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "프라푸치노용 시럽 라이트"
         ],
         price: 5100,
-        tags: ["다이어트", "라이트", "에스프레소", "프라푸치노"],
+        tags: ["다이어트", "라이트", "에스프레소", "프라푸치노", "카페인"],
         likes: 10,
     },
     {
@@ -282,7 +282,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "딸기 소스 1",
         ],
         price: 6100,
-        tags: ["다이어트", "라이트", "딸기", "요거트"],
+        tags: ["다이어트", "라이트", "딸기", "요거트", "디카페인"],
         likes: 12,
     },
     {
@@ -298,7 +298,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "에스프레소 휘핑 보통(선택)",
         ],
         price: 4800,
-        tags: ["다이어트", "라이트", "에스프레소", "요거트"],
+        tags: ["다이어트", "라이트", "에스프레소", "요거트", "카페인"],
         likes: 4,
     },
     {
@@ -312,7 +312,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "일반 휘핑",
         ],
         price: 3800,
-        tags: ["다이어트", "에스프레소"],
+        tags: ["다이어트", "에스프레소", "카페인"],
         likes: 2,
     },
     {
@@ -326,7 +326,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "클래식 시럽 없이",
         ],
         price: 5600,
-        tags: ["다이어트", "비건", "오트", "콜드브루"],
+        tags: ["다이어트", "비건", "오트", "콜드브루", "카페인"],
         likes: 1,
     },
     {
@@ -341,7 +341,66 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "바닐라 크림 베이스 적게",
         ],
         price: 5500,
-        tags: ["다이어트", "바닐라", "콜드브루"],
+        tags: ["다이어트", "바닐라", "콜드브루", "카페인"],
         likes: 6,
+    },
+    {
+        id: "21",
+        title: "쿨 라임 피지오 라이트",
+        desc: "라임 베이스에 건조된 라임 슬라이스를 넣은 시원하고 청량감 있는 음료",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/21-cool-lime-fizzio.webp",
+        type: BeverageType.ICED,
+        step: [
+            "쿨 라임 피지오 Tall",
+            "쿨 라임 베이스 적게",
+            "스파클링 엑스트라",
+        ],
+        price: 5900,
+        tags: ["탄산수", "라임", "다이어트", "피지오", "카페인"],
+        likes: 8,
+    },
+    {
+        id: "22",
+        title: "패션 탱고 티 레모네이드 피지오 라이트",
+        desc: "꽃 향기와 달콤하고 상큼한 시트러스 향과 탄산의 조화",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/22-passion-tango-tea.webp",
+        type: BeverageType.ICED,
+        step: [
+            "패션 탱고 티 레모네이드 피지오 Tall",
+            "클래식 시럽 없이",
+        ],
+        price: 5400,
+        tags: ["시트러스", "다이어트", "피지오", "디카페인"],
+        likes: 5,
+    },
+    {
+        id: "23",
+        title: "블랙 티 레모네이드 피지오 라이트",
+        desc: "진하게 우린 블랙 티와 상큼한 레모네이드를 더한 청량감 있는 음료",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/23-black-tea.webp",
+        type: BeverageType.ICED,
+        step: [
+            "블랙 티 레모네이드 피지오 Tall",
+            "클래식 시럽 없이",
+            "엑스트라 스파클링"
+        ],
+        price: 5400,
+        tags: ["블랙티", "다이어트", "피지오", "카페인"],
+        likes: 4,
+    },
+    {
+        id: "24",
+        title: "아이스 민트 블렌드 티",
+        desc: "스피어민트, 페퍼민트 등 민초단은 못 참는 메뉴",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/24-ice-mint-blend-tea.jpeg",
+        type: BeverageType.ICED,
+        step: [
+            "아이스 민트 블렌드 티 Venti",
+            "에스프레소 샷 2",
+            "얼음 많이"
+        ],
+        price: 6300,
+        tags: ["탄산수", "다이어트", "민트", "허브", "디카페인"],
+        likes: 2,
     },
 ];

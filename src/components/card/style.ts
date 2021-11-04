@@ -59,22 +59,22 @@ export const ContentWrapper = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 280px;
+    height: 330px;
 `;
 
 export const Title = styled.h3`
+    padding: 0 16px;
     text-align: center;
     font-size: 28px;
     color: #32312d;
     font-weight: 400;
-    margin: 0.8rem 1.6rem 0.4rem 1.6rem;
+    margin: 0.8rem 1.6rem 0.2rem 1.6rem;
     line-height: 1.2;
 `;
 
 export const HashTagContainer = styled.section`
-    padding: 0 30px;
-    margin-bottom: 0.4px;
-    line-height: 1.2;
+    padding: 0 32px;
+    line-height: 1.8;
 `
 
 export const HashTag = styled.span`
@@ -90,8 +90,7 @@ export const Desc = styled.span<DescType>`
     text-align: center;
     color: #0000008e;
     padding: 0rem 3rem;
-    margin-bottom: 0.4rem;
-    line-height: 1.2;
+    line-height: 1.3;
 `;
 
 export const Type = styled.span`
@@ -99,7 +98,6 @@ export const Type = styled.span`
     color: #0000008e;
     font-weight: 400;
     letter-spacing: .0125rem;
-    margin-bottom: 0.4rem;
     line-height: 1.2;
 `
 
