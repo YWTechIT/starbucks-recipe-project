@@ -71,13 +71,18 @@ export const Title = styled.h3`
     line-height: 1.2;
 `;
 
+export const HashTagContainer = styled.section`
+    padding: 0 30px;
+    margin-bottom: 0.4px;
+    line-height: 1.2;
+`
+
 export const HashTag = styled.span`
     font-size: 18px;
-    color: #0000008e;
-    padding: 0rem 3rem;
-    margin-bottom: 0.4rem;
-    line-height: 1.2;
-    text-align: center;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #006241;
+    cursor: pointer;
 `
 
 export const Desc = styled.span<DescType>`
