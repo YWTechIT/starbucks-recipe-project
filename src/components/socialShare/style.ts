@@ -37,6 +37,5 @@ export const KakaoShareButton = styled.a`
 
 export const KakaoIcon = styled.img`
     width: 48px;
-    height: 48px;
     border-radius: 22px;
 `;

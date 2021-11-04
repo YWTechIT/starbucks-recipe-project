@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1{
-    font-size: 48px;
+    font-size: 28px;
   }
   
   h2{

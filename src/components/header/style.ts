@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const NavBarWrapper = styled.nav`
+export const HeaderWrapper = styled.header`
     display: flex;
     align-items: center;
     position: sticky;
@@ -13,14 +13,13 @@ export const NavBarWrapper = styled.nav`
     letter-spacing: 1.92px;
     font-weight: 700;
     line-height: 17px;
-    z-index: 1;
+    z-index: 2;
 
     @media screen and (min-width: 768px){
         padding: 1.625rem;
         font-size: 24px;
     }
 `;
-
 
 export const LinkStyle = styled(Link)`
     font-weight: 700;

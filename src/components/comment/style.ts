@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const CommentContainer = styled.article`
-    margin: 20px 0;
+    margin: 20px;
     @media screen and (min-width: 768px) {
-        margin: 20px 3.3rem 0 3.3rem;
+        margin: 20px auto;
+        width: 70%;
     }
 `;

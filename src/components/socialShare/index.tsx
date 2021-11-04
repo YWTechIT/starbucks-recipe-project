@@ -6,7 +6,6 @@ import {
     LineIcon,
 } from "react-share";
 import { GridContainer, URLShareButton, KakaoShareButton, KakaoIcon } from "./style";
-import { kakaoLogo, shareImg } from "../../assets";
 import useScript from "../../hooks/useScript";
 import { useEffect } from "react";
 
@@ -14,6 +13,8 @@ const SocialButtonGroup = () => {
     const currentUrl = window.location.href;
     const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
     const Kakao = window.Kakao;
+    const kakaoImgSrc = "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/kakao-logo.webp";
+    const shareImgSrc = "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/share-img.webp";
 
     const handleKakaoMessage = () => {
         Kakao.Link.sendDefault({
@@ -21,7 +22,7 @@ const SocialButtonGroup = () => {
             content: {
               title: "스타벅스 히든 레시피",
               description: "스타벅스에서 할 수 있는 커스텀 음료는 무엇이 있을까?",
-              imageUrl: shareImg,
+              imageUrl: shareImgSrc,
               link: {
                 webUrl: currentUrl,
                 mobileWebUrl: currentUrl,
@@ -55,7 +56,7 @@ const SocialButtonGroup = () => {
                 <URLShareButton>URL</URLShareButton>
             </CopyToClipboard>
             <KakaoShareButton onClick={handleKakaoMessage}>
-                <KakaoIcon src={kakaoLogo}></KakaoIcon>
+                <KakaoIcon src={kakaoImgSrc}></KakaoIcon>
             </KakaoShareButton>
             <FacebookShareButton url={currentUrl}>
                 <FacebookIcon size={48} round={true} borderRadius={22} />
