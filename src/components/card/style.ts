@@ -49,9 +49,12 @@ export const ImgStyle = styled.img`
     object-position: center;
     transition: transform 1s ease;
     cursor: pointer;
-    &:hover {
-        transform: scale(1.1);
-    }
+    
+    @media screen and (min-width: 768px){
+        &:hover {
+            transform: scale(1.1);
+        }
+    }   
 `;
 
 export const ContentWrapper = styled.section`
