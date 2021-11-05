@@ -16,6 +16,10 @@ export const CaretButton = styled.button`
     &:hover{
         opacity: 0.6;
     }
+
+    @media screen and (min-width: 768px){
+        font-size: 17px;
+    }
 `;
 
 export const CaretImg = styled.img<CaretProps>`
