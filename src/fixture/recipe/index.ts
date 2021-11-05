@@ -357,7 +357,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         ],
         price: 5900,
         tags: ["탄산수", "라임", "다이어트", "피지오", "카페인"],
-        likes: 8,
+        likes: 11,
     },
     {
         id: "22",
@@ -371,7 +371,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         ],
         price: 5400,
         tags: ["시트러스", "다이어트", "피지오", "디카페인"],
-        likes: 5,
+        likes: 9,
     },
     {
         id: "23",
@@ -386,13 +386,13 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         ],
         price: 5400,
         tags: ["블랙티", "다이어트", "피지오", "카페인"],
-        likes: 4,
+        likes: 5,
     },
     {
         id: "24",
         title: "아이스 민트 블렌드 티",
         desc: "스피어민트, 페퍼민트 등 민초단은 못 참는 메뉴",
-        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/24-ice-mint-blend-tea.jpeg",
+        src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/24-ice-mint-blend-tea.webp",
         type: BeverageType.ICED,
         step: [
             "아이스 민트 블렌드 티 Venti",
