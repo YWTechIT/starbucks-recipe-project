@@ -8,7 +8,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/01-captain-crunch-berry.webp",
         type: BeverageType.ICED,
         step: [
-           "화이트 딸기 크림 Venti",
+           "화이트 딸기 크림 프라푸치노 Venti",
            "일반 우유 / 두유",
            "헤이즐넛 시럽 2",
            "자바칩과 토핑(반반) 6",
@@ -104,7 +104,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/06-butter-beer.webp",
         type: BeverageType.ICED,
         step: [
-            "바닐라 크림 프라푸치노 all",
+            "바닐라 크림 프라푸치노 Tall",
             "프라푸치노용 시럽",
             "바닐라 시럽 2",
             "헤이즐넛 시럽 2", 
@@ -145,7 +145,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "두유",
             "자바칩과 토핑(반반) 5",
             "에스프레소 휘핑 보통",
-            "초코릿 드리즐 보통",
+            "초콜릿 드리즐 보통",
             "유기농 말차 5"
         ],
         price: 8100,
@@ -179,7 +179,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         src: "https://starbucks-recipe.s3.ap-northeast-2.amazonaws.com/10-godiva.webp",
         type: BeverageType.ICED,
         step: [
-            "자바칩 프라푸치노 Venti",
+            "자바 칩 프라푸치노 Venti",
             "프라푸치노 로스트 4",
             "프라푸치노용 시럽",
             "모카 시럽 5", 
@@ -250,7 +250,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "헤이즐넛 시럽 1",
             "프라푸치노 자바칩 7",
             "에스프레소 휘핑 많이",
-            "초코 드리즐 보통",
+            "초콜릿 드리즐 보통",
         ],
         price: 8400,
         tags: ["카라멜", "헤이즐넛", "프라푸치노", "초콜릿", "카페인"],
@@ -295,7 +295,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
             "커피 스타벅스 더블 샷",
             "클래식 시럽 없이",
             "하프앤하프",
-            "에스프레소 휘핑 보통(선택)",
+            "에스프레소 휘핑 보통",
         ],
         price: 4800,
         tags: ["다이어트", "라이트", "에스프레소", "요거트", "카페인"],
@@ -382,7 +382,7 @@ export const RECIPE_SAMPLE: RecipeType[] = [
         step: [
             "블랙 티 레모네이드 피지오 Tall",
             "클래식 시럽 없이",
-            "엑스트라 스파클링"
+            "스파클링 엑스트라"
         ],
         price: 5400,
         tags: ["블랙티", "다이어트", "피지오", "카페인"],
