@@ -20,8 +20,8 @@ const SocialButtonGroup = () => {
         Kakao.Link.sendDefault({
             objectType: "feed",
             content: {
-              title: "스타벅스 히든 레시피",
-              description: "스타벅스에서 할 수 있는 커스텀 음료는 무엇이 있을까?",
+              title: "커스텀벅스",
+              description: "스타벅스 메뉴판에 없는 히든 레시피를 모아보는 사이트",
               imageUrl: shareImgSrc,
               link: {
                 webUrl: currentUrl,
