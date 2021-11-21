@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+## ❏ Project: 커스텀벅스
+Plz try military test in my <a href='https://custombucks.netlify.app/'>website</a> :)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ❏ Summary
+1. 진행기간: 21. 9. 23. ~
+2. 주요내용: 스타벅스 매장에서 팔지 않는 메뉴를 누구나 쉽게 커스텀 할 수 있는 레시피입니다. 
+3. 어려웠던 점: 작성 중...
+4. 결과: 작성 중...
+5. 향후계획: 작성 중...
 
-## Available Scripts
+## ❏ Preview
+1. PC 버전
+<img src="https://images.velog.io/images/abcd8637/post/19a49dae-9fcb-4b3a-ba73-6b1b73637e68/custombucks-pc.gif" width="300" height="600">
 
-In the project directory, you can run:
+2. mobile 버전
+<img src='https://images.velog.io/images/abcd8637/post/593eee5d-ea98-4316-91de-acb66cc67d52/custombucks-mobile2.gif' width='300' height= '600'>
 
-### `yarn start`
+## ❏ Stacks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img alt="ReactJS" src ="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=black&style=square"/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img alt="typescript-badge" src="https://img.shields.io/badge/-typescript-007acc?logo=Typescript&logoColor=black&style=square" />
 
-### `yarn test`
+<img alt="JS" src ="https://img.shields.io/badge/-javascript-F7DF1E?logo=javascript&logoColor=black&style=square"/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img alt="styledComponents" src ="https://img.shields.io/badge/-styledComponents-DB7093?logo=styledComponents&logoColor=black&style=square"/>
 
-### `yarn build`
+<img alt="Netlify" src ="https://img.shields.io/badge/-netlify-00C7B7?logo=netlify&logoColor=black&style=square"/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ❏ Introduce
+1. 스타벅스에서 팔지 않는 커스텀 레시피를 한눈에 볼 수 있는 사이트입니다.
+2. 반응형 페이지를 기반으로 모바일, 태블릿 대응이 가능합니다.
+3. 카카오톡, 페이스북, 트위터에 공유 할 수 있습니다.
+4. 레시피에 좋아요 버튼을 누를 수 있습니다.
+5. 해쉬태그별로 모아 볼 수 있습니다.
+6. 레시피를 정렬 할 수 있습니다.(이름순, 인기순, 가격순, 좋아요순)
+7. 관리자와 댓글기능으로 피드백이 가능합니다.
