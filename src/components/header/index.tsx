@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <HeaderWrapper>
             <h1>
-                <LinkStyle to="/">STARBUCKS</LinkStyle>
+                <LinkStyle to="/">CUSTOMBUCKS</LinkStyle>
             </h1>
         </HeaderWrapper>
     );

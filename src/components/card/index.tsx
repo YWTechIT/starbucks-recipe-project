@@ -11,19 +11,21 @@ import {
     Type,
     Button,
     ImgWrapper,
-    HashTag,
+    HashTagContainer,
+    HashTag
 } from "./style";
 
 interface CardProps {
     item: RecipeType;
     likeBookMark: string[];
     handleBookMark: React.Dispatch<React.SetStateAction<string[]>>;
+    getSameHashTagRecipe: (tag: string) => void;
 }
 
 const onSaved = true;
 const offSaved = false;
 
-const Card = ({ item, likeBookMark, handleBookMark }: CardProps) => {
+const Card = ({ item, likeBookMark, handleBookMark, getSameHashTagRecipe }: CardProps) => {
     let history = useHistory();
     const beverageType = item.type.split("_").join(" ");
     const [liked, setLiked] = useState<boolean>(likeBookMark.includes(item.id) ? onSaved : offSaved);
@@ -48,11 +50,11 @@ const Card = ({ item, likeBookMark, handleBookMark }: CardProps) => {
             </ImgWrapper>
             <ContentWrapper>
                 <Title>{item.title}</Title>
-                <HashTag>
-                    {item.tags.map((item, idx) => (
-                        <span key={idx}>{`#${item} `}</span>
+                <HashTagContainer>
+                    {item.tags.map((tag, idx) => (
+                        <HashTag key={idx} onClick={()=>getSameHashTagRecipe(tag)}>{`#${tag} `}</HashTag>
                     ))}
-                </HashTag>
+                </HashTagContainer>
                 <Desc fontSize="18">{item.desc}</Desc>
                 <Type>{beverageType}</Type>
                 <Type>₩ {item.price.toLocaleString()}</Type>

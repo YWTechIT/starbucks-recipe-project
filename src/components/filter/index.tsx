@@ -8,7 +8,6 @@ interface FilterProps {
     applySortData: (type: SortType) => void;
     handleSortBookMark: React.Dispatch<React.SetStateAction<string[]>>;
     saveFilterTypeAtBookMark: (type: bookMarkType) => void;
-
     sortType: SortType;
     setSortType: React.Dispatch<React.SetStateAction<SortType>>;
 }
@@ -40,7 +39,7 @@ const Filter = ({applySortData, handleSortBookMark, saveFilterTypeAtBookMark, so
     
     return (
         <>
-            <Caret isModalOpen={isModalOpen} handleToggleModal={handleToggleModal}/>
+            <Caret isModalOpen={isModalOpen} handleToggleModal={handleToggleModal} sortType={sortType}/>
             { isModalOpen && <ModalBackGround isModalOpen={isModalOpen}/> }
             { isModalOpen && <Modal isModalOpen={isModalOpen} handleToggleModal={handleToggleModal} handleSortType={handleSortType} sortType={sortType} resetFilterData={resetFilterData}/>}
         </>

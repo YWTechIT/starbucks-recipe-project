@@ -5,13 +5,14 @@ import { SortType } from "../../types";
 export interface CaretProps{
   isModalOpen: boolean;
   handleToggleModal?: () => void;
+  sortType?: SortType;
   modalType?: SortType;
 }
 
-const Caret = ({isModalOpen, handleToggleModal, modalType}: CaretProps) => {
+const Caret = ({isModalOpen, handleToggleModal, modalType, sortType}: CaretProps) => {
   return(
     <CaretButton onClick={handleToggleModal}>
-        {modalType}<CaretImg isModalOpen={isModalOpen} src={caret} />
+        {sortType}<CaretImg isModalOpen={isModalOpen} src={caret} />
     </CaretButton>
   )
 }
