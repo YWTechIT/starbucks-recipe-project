@@ -1,5 +1,5 @@
 ## ❏ Project: 커스텀벅스
-Plz try military test in my <a href='https://custombucks.netlify.app/'>website</a> :)
+Plz try my custombucks project <a href='https://custombucks.netlify.app/'>this</a> website :)
 
 ## ❏ Summary
 1. 진행기간: 21. 9. 23. ~
