@@ -35,5 +35,5 @@ Plz try my custombucks project <a href='https://www.custombucks.co.kr/'>this</a>
 <img alt="strapi" src ="https://img.shields.io/badge/-strapi-8d75fe?logo=strapi&logoColor=black&style=square"/>
 
 ## ❏ Learned
-1. 이미지를 빠르게 로딩할 수 있는 방법 중 하나인 `AWS S3`의 사용 방법을 알게 되었습니다.
+1. 콘텐츠를 빠르게 로딩하는 방법인 `Amazon cloudFront`와 `edge server`를 알게 되었습니다.
 2. 직접 API를 제작하며 데이타 설계의 중요성을 배웠습니다.(`underfetching`, `overfetching`)
