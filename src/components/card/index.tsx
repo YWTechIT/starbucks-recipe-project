@@ -8,11 +8,12 @@ import {
     ContentWrapper,
     Title,
     Desc,
+    BeverageType,
     Type,
     Button,
     ImgWrapper,
     HashTagContainer,
-    HashTag
+    HashTag,
 } from "./style";
 
 interface CardProps {
@@ -25,14 +26,23 @@ interface CardProps {
 const onSaved = true;
 const offSaved = false;
 
-const Card = ({ item, likeBookMark, handleBookMark, getSameHashTagRecipe }: CardProps) => {
+const Card = ({
+    item,
+    likeBookMark,
+    handleBookMark,
+    getSameHashTagRecipe,
+}: CardProps) => {
     let history = useHistory();
     const beverageType = item.type.split("_").join(" ");
-    const [liked, setLiked] = useState<boolean>(likeBookMark.includes(item.id) ? onSaved : offSaved);
+    const [liked, setLiked] = useState<boolean>(
+        likeBookMark.includes(item.id) ? onSaved : offSaved
+    );
 
     const handleSaved = () => {
         if (liked) {
-            handleBookMark((bookMarks) => bookMarks.filter((bookMark) => bookMark !== item.id));
+            handleBookMark((bookMarks) =>
+                bookMarks.filter((bookMark) => bookMark !== item.id)
+            );
         } else {
             handleBookMark((bookMarks) => [...bookMarks, item.id]);
         }
@@ -52,16 +62,19 @@ const Card = ({ item, likeBookMark, handleBookMark, getSameHashTagRecipe }: Card
                 <Title>{item.title}</Title>
                 <HashTagContainer>
                     {item.tags.map((tag, idx) => (
-                        <HashTag key={idx} onClick={()=>getSameHashTagRecipe(tag)}>{`#${tag} `}</HashTag>
+                        <HashTag
+                            key={idx}
+                            onClick={() => getSameHashTagRecipe(tag)}
+                        >{`#${tag} `}</HashTag>
                     ))}
                 </HashTagContainer>
                 <Desc fontSize="18">{item.desc}</Desc>
-                <Type>{beverageType}</Type>
+                <BeverageType kind={beverageType}>{beverageType}</BeverageType>
                 <Type>₩ {item.price.toLocaleString()}</Type>
                 <Button onClick={() => history.push(`/recipe/${item.id}`)}>
                     GET THE RECIPE
                 </Button>
-                <Like liked={liked} handleLiked={handleSaved} item={item}/>
+                <Like liked={liked} handleLiked={handleSaved} item={item} />
             </ContentWrapper>
         </CardWrapper>
     );
