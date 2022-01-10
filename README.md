@@ -16,7 +16,7 @@ Plz try my custombucks project <a href='https://www.custombucks.co.kr/'>this</a>
 6. 레시피를 정렬 할 수 있습니다.(이름순, 인기순, 가격순, 좋아요순)
 7. 관리자와 댓글기능으로 피드백이 가능합니다.
 8. loading 중에는 skeleton UI를 보여줍니다.
-9. recipe를 직접 API로 <a href='https://limitless-mountain-90824.herokuapp.com/recipes'>제작</a>하여 통신합니다.(heroku 통신속도 저하로 인한 로컬 recipe 사용)
+9. recipe를 직접 API로 <a href='https://limitless-mountain-90824.herokuapp.com/recipes'>제작</a>하여 통신합니다.(heroku 통신속도 저하로 인한 로컬 data 사용)
 10. 개인 도메인을 붙여 사용성을 높였습니다.
 
 ## ❏ Stacks
