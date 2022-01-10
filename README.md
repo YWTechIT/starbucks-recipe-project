@@ -26,6 +26,8 @@ Plz try my custombucks project <a href='https://www.custombucks.co.kr/'>this</a>
 
 <img alt="styledComponents" src ="https://img.shields.io/badge/-styledComponents-DB7093?logo=styledComponents&logoColor=black&style=square"/>
 
+<img alt="amazon-s3" src ="https://img.shields.io/badge/-S3-ec7212?logo=amazon&logoColor=black&style=square"/>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b804127f-50df-4991-a7fe-5fd1315dd84c/deploy-status)](https://app.netlify.com/sites/custombucks/deploys)
 
 <img alt="heroku" src ="https://img.shields.io/badge/-heroku-9f7cc2?logo=heroku&logoColor=black&style=square"/>
