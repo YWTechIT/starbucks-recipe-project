@@ -8,3 +8,4 @@ export { default as Comment } from "./comment";
 export { default as Modal } from "./modal";
 export { default as Caret } from "./caret";
 export { default as FilterBar } from "./filterbar";
+export { default as Skeleton } from "./skeleton";
