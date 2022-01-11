@@ -13,7 +13,7 @@ Plz try my custombucks project <a href='https://www.custombucks.co.kr/'>this</a>
 3. URL 복사, 카카오톡, 페이스북, 라인에 공유 할 수 있습니다.
 4. 레시피에 좋아요 버튼을 누를 수 있습니다.(새로고침 후 동일)
 5. 해쉬태그별로 모아 볼 수 있습니다.
-6. 레시피를 정렬 할 수 있습니다.(이름순, 인기순, 가격순, 좋아요순)
+6. 레시피를 정렬 할 수 있습니다.(이름순, 인기순, 가격순, 좋아요순, )
 7. 관리자와 댓글기능으로 피드백이 가능합니다.
 8. loading 중에는 skeleton UI를 보여줍니다.
 9. recipe를 직접 API로 <a href='https://limitless-mountain-90824.herokuapp.com/recipes'>제작</a>하여 통신합니다.(heroku 통신속도 저하로 인한 로컬 data 사용)
